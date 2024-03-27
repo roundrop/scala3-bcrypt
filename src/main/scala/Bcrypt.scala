@@ -1,4 +1,4 @@
-package dev.roundrop.bcrypt
+package com.github.roundrop.bcrypt
 
 import com.password4j._
 import java.nio.charset.StandardCharsets

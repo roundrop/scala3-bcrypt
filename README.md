@@ -4,14 +4,14 @@ scala3-bcrypt is a scala friendly wrapper of [Password4j](https://github.com/Pas
 
 ### Setup
 ```
-libraryDependencies += "dev.roundrop" %% "scala3-bcrypt" % "0.1.0"
+libraryDependencies += "com.github.roundrop" %% "scala3-bcrypt" % "0.1.0"
 ```
 
 ### Usage
 
 #### Hash password
 ```scala
-scala> import dev.roundrop.bcrypt._
+scala> import com.github.roundrop.bcrypt._
                                                                                                                              
 scala> "password".bcrypt()
 val res0: scala.util.Try[String] = Success($2a$10$KH/WkRKeqCYJXbR2IcheRO9BORWMRw5SaY0YTRiIjb2u2uhsY/AH.)

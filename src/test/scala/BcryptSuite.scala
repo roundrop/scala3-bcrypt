@@ -1,4 +1,4 @@
-package dev.roundrop.bcrypt
+package com.github.roundrop.bcrypt
 
 class BcryptSuite extends munit.FunSuite:
 

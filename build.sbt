@@ -11,16 +11,14 @@ scalacOptions ++= Seq(
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "scala3-bcrypt",
-    organization := "dev.roundrop",
-    version := "0.1.0-SNAPSHOT",
-    licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
-
+    name         := "scala3-bcrypt",
+    organization := "com.github.roundrop",
+    version      := "0.1.0-SNAPSHOT",
+    licenses     := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     scalaVersion := scala3Version,
-
     libraryDependencies ++= Seq(
       "com.password4j" % "password4j" % "1.8.1",
-      "org.scalameta" %% "munit" % "0.7.29" % Test
+      "org.scalameta" %% "munit"      % "0.7.29" % Test
     )
   )
 
