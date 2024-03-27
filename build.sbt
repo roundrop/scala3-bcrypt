@@ -13,8 +13,8 @@ lazy val root = project
   .settings(
     name         := "scala3-bcrypt",
     organization := "com.github.roundrop",
-    version      := "0.1.0-SNAPSHOT",
     licenses     := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
+    homepage     := Some(new URL("https://github.com/roundrop/scala3-bcrypt")),
     scalaVersion := scala3Version,
     libraryDependencies ++= Seq(
       "com.password4j" % "password4j" % "1.8.1",
@@ -36,3 +36,12 @@ pomExtra in Global := {
       </developer>
     </developers>
 }
+
+releasePublishArtifactsAction := PgpKeys.publishSigned.value
+
+publishTo := Some(
+  if (isSnapshot.value)
+    Opts.resolver.sonatypeSnapshots
+  else
+    Opts.resolver.sonatypeStaging
+)
